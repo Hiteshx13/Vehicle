@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/rlRoot">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOwnerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            tools:text="Jack Sparrow"
+            android:background="@drawable/custom_ripple_light_blue"
+            android:textSize="@dimen/_18ssp"
+            android:textColor="@drawable/color_selector_blue_white"
+            android:fontFamily="@font/font_pieces_of_eight"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_3sdp"
+            android:background="@drawable/shape_thin_oval_blue"/>
+</LinearLayout>
