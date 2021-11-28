@@ -15,12 +15,10 @@ class OwnerViewModel(val ownerRepository: OwnerRepository) : ViewModel() {
     init {
         getOwnerList("list")
     }
-    fun getOwnerList(op: String) = viewModelScope.launch {
+    private fun getOwnerList(op: String) = viewModelScope.launch {
         ownerResponse.postValue(Resource.Loading())
         val response=ownerRepository.getOwnerList(op)
         ownerResponse.postValue(handleOwnerResponse(response))
-
-
     }
 
     private fun handleOwnerResponse(response: Response<OwnerResponse>): Resource<OwnerResponse>{

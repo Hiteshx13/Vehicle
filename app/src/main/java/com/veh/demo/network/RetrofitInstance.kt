@@ -14,8 +14,6 @@ import com.google.gson.Gson
 
 class RetrofitInstance {
 
-    //private val networkInterface:VehicleAPI
-
     companion object {
 
         private val retrofit by lazy {

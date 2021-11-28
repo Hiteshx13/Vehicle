@@ -39,11 +39,26 @@ object AppUtils {
             .setNegativeButton(
                 R.string.cancel
             ) { dialog, id ->
-//                listener.onCancelClicked()
                 dialog.dismiss()
             }
-        // Create the AlertDialog and show
         builder.create().show()
+    }
+
+    /**
+     * remove extra string from image url
+     * **/
+    fun getFormattedImageUrl(str: String): String {
+        val indexEnd: Int
+        val strUrl = str.lowercase()
+        var subStrUrl = strUrl.subSequence(0, strUrl.length)
+        if (strUrl.contains(".jpg", true)) {
+            indexEnd = strUrl.indexOf(".jpg")
+            subStrUrl = strUrl.substring(0, indexEnd + 4)
+        } else if (strUrl.contains(".jpeg", true)) {
+            indexEnd = strUrl.indexOf(".jpeg")
+            subStrUrl = strUrl.substring(0, indexEnd + 5)
+        }
+        return subStrUrl.toString()
     }
 
 }

@@ -32,6 +32,7 @@ class FragmentMapUserVehicle : Fragment(R.layout.fragment_map_user_vehicle), OnM
     private var googleMap: GoogleMap? = null
     private lateinit var locationCallback: LocationCallback
     private lateinit var correntDeviceLocation: Location
+
     private lateinit var mFusedLocationClient: FusedLocationProviderClient
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
