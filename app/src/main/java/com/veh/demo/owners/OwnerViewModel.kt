@@ -19,6 +19,8 @@ class OwnerViewModel(val ownerRepository: OwnerRepository) : ViewModel() {
         ownerResponse.postValue(Resource.Loading())
         val response=ownerRepository.getOwnerList(op)
         ownerResponse.postValue(handleOwnerResponse(response))
+
+
     }
 
     private fun handleOwnerResponse(response: Response<OwnerResponse>): Resource<OwnerResponse>{
